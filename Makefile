@@ -21,7 +21,7 @@ test: $(NAME)
 asan: $(OBJS)
 	gcc -fsanitize=address $(OBJS) -o $(NAME)
 git:
-	git add $(SRCS) Makefile $(INCLUDEDIR)
+	git add $(SRCSPREFIX) Makefile $(INCLUDEDIR)
 clean:
 	$(MAKE) -C $(LIBFTDIR)/ clean
 	rm -f $(OBJS)
